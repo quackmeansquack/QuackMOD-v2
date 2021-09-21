@@ -1,0 +1,479 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "perms": [],
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "help",
+              "value": "Shows this menu",
+              "inline": "true"
+            },
+            {
+              "name": "mute",
+              "value": "Mutes the person",
+              "inline": "true"
+            },
+            {
+              "name": "unmute",
+              "value": "Unmutes the person",
+              "inline": "true"
+            },
+            {
+              "name": "kick",
+              "value": "Kicks the person",
+              "inline": "true"
+            },
+            {
+              "name": "ban",
+              "value": ";ban @user (amount of days) (reason) Ex: ;ban @fuckstick 5 dumb fuck",
+              "inline": "true"
+            },
+            {
+              "name": "purge",
+              "value": "Deletes # of messages stated after the command Ex: ;purge 50",
+              "inline": "true"
+            },
+            {
+              "name": "pfp",
+              "value": "Gets the profile picture of whoever mentioned",
+              "inline": "true"
+            },
+            {
+              "name": "giverole",
+              "value": "Gives the role to whoever mentioned, used like this: ;giverole @user (rolename) Ex: ;giverole @fuckstick DUMB FUCK (HAS TO BE AN EXISTING ROLE)",
+              "inline": "true"
+            },
+            {
+              "name": "removerole",
+              "value": "Removes the role of whoever mentioned. Ex; ;removerole @fuckstick DUMB FUCK",
+              "inline": "true"
+            },
+            {
+              "name": "hentai",
+              "value": "What do you think it does?",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Help Menu",
+          "url": "",
+          "authorname": "QuackMOD",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Here's the commands for the stupid fucks who don't know the commands.",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "mute",
+      "perms": [
+        "borsalino (staff)"
+      ],
+      "actions": [
+        {
+          "name": "get person to mute",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "muteuser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "remove Mortals",
+          "category": "User Action",
+          "type": "Remove Role From User",
+          "user": "${tempVars.muteuser.id}",
+          "rolename": "Mortal Ducks",
+          "reason": "muted"
+        },
+        {
+          "name": "give muted role",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "user": "${tempVars.muteuser.id}",
+          "rolename": "muted"
+        },
+        {
+          "name": "mute response",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Mute",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Muted <@${tempVars.muteuser.id}>.",
+          "thumbnail": "${tempVars.muteuser.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "unmute",
+      "perms": [
+        "borsalino (staff)"
+      ],
+      "actions": [
+        {
+          "name": "get person to unmute",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "unmuteuser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "remove muted",
+          "category": "User Action",
+          "type": "Remove Role From User",
+          "user": "${tempVars.unmuteuser.id}",
+          "rolename": "muted",
+          "reason": "unmuted"
+        },
+        {
+          "name": "give Mortal Duck",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "user": "${tempVars.unmuteuser.id}",
+          "rolename": "Mortal Ducks"
+        },
+        {
+          "name": "unmuted response",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Unmute",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "<@${tempVars.unmuteuser.id}> was unmuted.",
+          "thumbnail": "${tempVars.unmuteuser.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "kick",
+      "perms": [
+        "borsalino (staff)"
+      ],
+      "actions": [
+        {
+          "name": "get person to kick",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "kickuser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "kick reason",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "kickreason",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "2+"
+        },
+        {
+          "name": "kick them",
+          "category": "User Action",
+          "type": "Kick User",
+          "user": "${tempVars.kickuser.id}",
+          "reason": "kicked by QuackMOD"
+        },
+        {
+          "name": "kicked response",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Kick",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "<@${tempVars.kickuser.id}> was kicked for: ${tempVars.kickreason}",
+          "thumbnail": "${tempVars.kickuser.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "ban",
+      "perms": [
+        "borsalino (staff)"
+      ],
+      "actions": [
+        {
+          "name": "get banuser",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "banuser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "time in days",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "lengthofban",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "reason of ban",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "banreason",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "3+"
+        },
+        {
+          "name": "ban them",
+          "category": "User Action",
+          "type": "Ban User",
+          "user": "${tempVars.banuser.id}",
+          "reason": "${tempVars.banreason}",
+          "days": "${tempVars.lengthofban}"
+        },
+        {
+          "name": "ban response",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Ban",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "<@${tempVars.banuser.id}> was banned for ${tempVars.lengthofban} days for: ${tempVars.banreason}",
+          "thumbnail": "${tempVars.banuser.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "purge",
+      "perms": [],
+      "actions": [
+        {
+          "name": "purge amount",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "purgeamount",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "purge thing",
+          "category": "Channel Action",
+          "type": "Delete All Messages",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "msgcount": "${tempVars.purgeamount}"
+        },
+        {
+          "name": "purge response",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Purge",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Purged ${tempVars.purgeamount} messages.",
+          "thumbnail": "${dbsVars.CommandAuthor.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "hentai",
+      "actions": [
+        {
+          "name": "hentai?",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Hentai?",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "What the fuck man, whatever here you go",
+          "thumbnail": "",
+          "image": "https://external-preview.redd.it/3FcwR_J1373zi8NHfoSND3Mx2qSSvA0CZ80zEAEgAUI.jpg?auto=webp&s=8a1a8734fb043d6e9383c380fb0da75ee0ff65f5",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "pfp",
+      "actions": [
+        {
+          "name": "get pfpuser",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "pfpuser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "pfp user",
+          "category": "Message",
+          "type": "Send Image",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "url": "${tempVars.pfpuser.user.avatarURL}",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "giverole",
+      "perms": [],
+      "actions": [
+        {
+          "name": "get role user",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "giveroleto",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "what role to give",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "whatrole",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "2+"
+        },
+        {
+          "name": "rolegive",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "user": "${tempVars.giveroleto.id}",
+          "rolename": "${tempVars.whatrole}"
+        },
+        {
+          "name": "rolegive response",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Give Role",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Gave ${tempVars.whatrole} to <@${tempVars.giveroleto.id}>.",
+          "thumbnail": "${dbsVars.CommandAuthor.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "removerole",
+      "perms": [],
+      "actions": [
+        {
+          "name": "get role user_1",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "removerolefrom",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "what role to give_1",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "removewhat",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "2+"
+        },
+        {
+          "name": "remove the role",
+          "category": "User Action",
+          "type": "Remove Role From User",
+          "user": "${tempVars.removerolefrom.id}",
+          "rolename": "${tempVars.removewhat}",
+          "reason": "removed"
+        },
+        {
+          "name": "rolegive response_1",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "Remove Role",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Removed the ${tempVars.removewhat} role from <@${tempVars.removerolefrom.id}>.",
+          "thumbnail": "${dbsVars.CommandAuthor.user.avatarURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}

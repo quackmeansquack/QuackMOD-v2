@@ -1,0 +1,1535 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "help",
+      "guid": "7942fe4c-dffa-4146-8cab-d254b3d80d5d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "37eda463-a170-44f9-af54-61378ffc9294"
+          ]
+        }
+      ],
+      "x": 148,
+      "y": 188,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "help menu",
+      "guid": "37eda463-a170-44f9-af54-61378ffc9294",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "help",
+          "value": "Shows this menu",
+          "inline": "true"
+        },
+        {
+          "name": "mute",
+          "value": "Mutes the person",
+          "inline": "true"
+        },
+        {
+          "name": "unmute",
+          "value": "Unmutes the person",
+          "inline": "true"
+        },
+        {
+          "name": "kick",
+          "value": "Kicks the person",
+          "inline": "true"
+        },
+        {
+          "name": "ban",
+          "value": ";ban @user (amount of days) (reason) Ex: ;ban @fuckstick 5 dumb fuck",
+          "inline": "true"
+        },
+        {
+          "name": "purge",
+          "value": "Deletes # of messages stated after the command Ex: ;purge 50",
+          "inline": "true"
+        },
+        {
+          "name": "pfp",
+          "value": "Gets the profile picture of whoever mentioned",
+          "inline": "true"
+        },
+        {
+          "name": "giverole",
+          "value": "Gives the role to whoever mentioned, used like this: ;giverole @user (rolename) Ex: ;giverole @fuckstick DUMB FUCK (HAS TO BE AN EXISTING ROLE)",
+          "inline": "true"
+        },
+        {
+          "name": "removerole",
+          "value": "Removes the role of whoever mentioned. Ex; ;removerole @fuckstick DUMB FUCK",
+          "inline": "true"
+        },
+        {
+          "name": "hentai",
+          "value": "What do you think it does?",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
+        }
+      ],
+      "x": 345,
+      "y": 182,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Help Menu",
+        "",
+        "QuackMOD",
+        "",
+        "",
+        "Here's the commands for the stupid fucks who don't know the commands.",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "mute",
+      "guid": "e776e9ee-036a-4555-9fd5-2495792a647d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "e66d6f7d-9d12-4df9-8d2e-ae600d58d79a"
+          ]
+        }
+      ],
+      "x": 142,
+      "y": 306,
+      "perms": [
+        "borsalino (staff)"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "unmute",
+      "guid": "7b474ec8-5a9d-4430-a8a3-575a4dd331b3",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "fff27346-e279-49de-919f-82db64fe0310"
+          ]
+        }
+      ],
+      "x": 139,
+      "y": 415,
+      "perms": [
+        "borsalino (staff)"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "kick",
+      "guid": "f42463ec-3ac9-43f1-899e-f1806fcb6fd5",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "f040c761-0f79-4490-9490-fd6680b0113f"
+          ]
+        }
+      ],
+      "x": 121,
+      "y": 655,
+      "perms": [
+        "borsalino (staff)"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "ban",
+      "guid": "5d3421fd-7310-4e43-bc44-35c78d5e63b4",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "83530690-88b7-47b2-bfce-0cef79360873"
+          ]
+        }
+      ],
+      "x": 85,
+      "y": 863,
+      "perms": [
+        "borsalino (staff)"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "purge",
+      "guid": "83978484-94c4-4423-9d5e-6618cacbb49d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "82eda56d-147f-45ba-af75-06af235ebdb9"
+          ]
+        }
+      ],
+      "x": 75,
+      "y": 1057,
+      "perms": []
+    },
+    {
+      "type": "command",
+      "name": "hentai",
+      "guid": "386f2562-1436-4c93-a3e9-15029c4cf2c7",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "99f16080-7176-4e82-a8a6-969cd48d6606"
+          ]
+        }
+      ],
+      "x": 57,
+      "y": 1424
+    },
+    {
+      "type": "response",
+      "name": "get person to mute",
+      "guid": "e66d6f7d-9d12-4df9-8d2e-ae600d58d79a",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cc0e69c7-d1fb-4b15-9667-e4ccc3684577"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e776e9ee-036a-4555-9fd5-2495792a647d"
+        }
+      ],
+      "x": 342,
+      "y": 305,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "muteuser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "give muted role",
+      "guid": "6f53b48f-6bb6-44ea-800f-1191050ef194",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1d278ed3-ce42-496c-bbff-9845e2525e9e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "cc0e69c7-d1fb-4b15-9667-e4ccc3684577"
+        }
+      ],
+      "x": 741,
+      "y": 318,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.muteuser.id}",
+        "muted"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "remove Mortals",
+      "guid": "cc0e69c7-d1fb-4b15-9667-e4ccc3684577",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "6f53b48f-6bb6-44ea-800f-1191050ef194"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e66d6f7d-9d12-4df9-8d2e-ae600d58d79a"
+        }
+      ],
+      "x": 539,
+      "y": 319,
+      "rtype": "User Action",
+      "rsubtype": "Remove Role From User",
+      "formdata": [
+        "${tempVars.muteuser.id}",
+        "Mortal Ducks",
+        "muted"
+      ],
+      "formnames": [
+        "user",
+        "roleName",
+        "reason"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "mute response",
+      "guid": "1d278ed3-ce42-496c-bbff-9845e2525e9e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6f53b48f-6bb6-44ea-800f-1191050ef194"
+        }
+      ],
+      "x": 938,
+      "y": 319,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Mute",
+        "",
+        "",
+        "",
+        "",
+        "Muted <@${tempVars.muteuser.id}>.",
+        "${tempVars.muteuser.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get person to unmute",
+      "guid": "fff27346-e279-49de-919f-82db64fe0310",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d1d87e6f-f483-42b8-b43a-9b8c20625326"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7b474ec8-5a9d-4430-a8a3-575a4dd331b3"
+        }
+      ],
+      "x": 337,
+      "y": 448,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "unmuteuser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "remove muted",
+      "guid": "d1d87e6f-f483-42b8-b43a-9b8c20625326",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "92db53ea-16fe-4109-ba28-8c644ca6beae"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "fff27346-e279-49de-919f-82db64fe0310"
+        }
+      ],
+      "x": 531,
+      "y": 473,
+      "rtype": "User Action",
+      "rsubtype": "Remove Role From User",
+      "formdata": [
+        "${tempVars.unmuteuser.id}",
+        "muted",
+        "unmuted"
+      ],
+      "formnames": [
+        "user",
+        "roleName",
+        "reason"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "give Mortal Duck",
+      "guid": "92db53ea-16fe-4109-ba28-8c644ca6beae",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "5ca65780-5c57-4a2f-855d-b4c9a19280f3"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d1d87e6f-f483-42b8-b43a-9b8c20625326"
+        }
+      ],
+      "x": 748,
+      "y": 465,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.unmuteuser.id}",
+        "Mortal Ducks"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "unmuted response",
+      "guid": "5ca65780-5c57-4a2f-855d-b4c9a19280f3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "92db53ea-16fe-4109-ba28-8c644ca6beae"
+        }
+      ],
+      "x": 943,
+      "y": 457,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Unmute",
+        "",
+        "",
+        "",
+        "",
+        "<@${tempVars.unmuteuser.id}> was unmuted.",
+        "${tempVars.unmuteuser.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get person to kick",
+      "guid": "f040c761-0f79-4490-9490-fd6680b0113f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "5be359ee-1467-4baf-b993-2f46a64f316f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f42463ec-3ac9-43f1-899e-f1806fcb6fd5"
+        }
+      ],
+      "x": 340,
+      "y": 650,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "kickuser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "kick them",
+      "guid": "18bae7f9-d491-4dd0-bab2-cedacb43172b",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "2e905ee4-c0d0-43f6-999f-e57ef654d13d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5be359ee-1467-4baf-b993-2f46a64f316f"
+        }
+      ],
+      "x": 767,
+      "y": 677,
+      "rtype": "User Action",
+      "rsubtype": "Kick User",
+      "formdata": [
+        "${tempVars.kickuser.id}",
+        "kicked by QuackMOD"
+      ],
+      "formnames": [
+        "user",
+        "reason"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "kicked response",
+      "guid": "2e905ee4-c0d0-43f6-999f-e57ef654d13d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "18bae7f9-d491-4dd0-bab2-cedacb43172b"
+        }
+      ],
+      "x": 973,
+      "y": 660,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Kick",
+        "",
+        "",
+        "",
+        "",
+        "<@${tempVars.kickuser.id}> was kicked for: ${tempVars.kickreason}",
+        "${tempVars.kickuser.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get banuser",
+      "guid": "83530690-88b7-47b2-bfce-0cef79360873",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "e472a6d0-5b22-47f4-a8e6-f56b8d4e20f2"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5d3421fd-7310-4e43-bc44-35c78d5e63b4"
+        }
+      ],
+      "x": 283,
+      "y": 849,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "banuser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ban them",
+      "guid": "b8441469-0369-433c-8a6a-d9cd655e0a99",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b5508282-c531-43b9-bbae-98d7d9bc62e3"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "4bccf352-fe35-4fd0-8d24-433c38bc5193"
+        }
+      ],
+      "x": 841,
+      "y": 861,
+      "rtype": "User Action",
+      "rsubtype": "Ban User",
+      "formdata": [
+        "${tempVars.banuser.id}",
+        "${tempVars.banreason}",
+        "${tempVars.lengthofban}"
+      ],
+      "formnames": [
+        "user",
+        "reason",
+        "days"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "time in days",
+      "guid": "e472a6d0-5b22-47f4-a8e6-f56b8d4e20f2",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "lengthofban",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "4bccf352-fe35-4fd0-8d24-433c38bc5193"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "83530690-88b7-47b2-bfce-0cef79360873"
+        }
+      ],
+      "x": 478,
+      "y": 853,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "lengthofban",
+        "Number",
+        "temp",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "reason of ban",
+      "guid": "4bccf352-fe35-4fd0-8d24-433c38bc5193",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "banreason",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b8441469-0369-433c-8a6a-d9cd655e0a99"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e472a6d0-5b22-47f4-a8e6-f56b8d4e20f2"
+        }
+      ],
+      "x": 657,
+      "y": 857,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "banreason",
+        "Text",
+        "temp",
+        "3+"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ban response",
+      "guid": "b5508282-c531-43b9-bbae-98d7d9bc62e3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b8441469-0369-433c-8a6a-d9cd655e0a99"
+        }
+      ],
+      "x": 1042,
+      "y": 865,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Ban",
+        "",
+        "",
+        "",
+        "",
+        "<@${tempVars.banuser.id}> was banned for ${tempVars.lengthofban} days for: ${tempVars.banreason}",
+        "${tempVars.banuser.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "kick reason",
+      "guid": "5be359ee-1467-4baf-b993-2f46a64f316f",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "kickreason",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "18bae7f9-d491-4dd0-bab2-cedacb43172b"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f040c761-0f79-4490-9490-fd6680b0113f"
+        }
+      ],
+      "x": 556,
+      "y": 675,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "kickreason",
+        "Text",
+        "temp",
+        "2+"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "purge amount",
+      "guid": "82eda56d-147f-45ba-af75-06af235ebdb9",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "purgeamount",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "972db453-1e96-4d87-b2c6-8d4363a993ad"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "83978484-94c4-4423-9d5e-6618cacbb49d"
+        }
+      ],
+      "x": 283,
+      "y": 1052,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "purgeamount",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "purge thing",
+      "guid": "972db453-1e96-4d87-b2c6-8d4363a993ad",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "c90ac44d-2313-48d1-b65d-ee0385b690d5"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "82eda56d-147f-45ba-af75-06af235ebdb9"
+        }
+      ],
+      "x": 487,
+      "y": 1050,
+      "rtype": "Channel Action",
+      "rsubtype": "Delete All Messages",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "${tempVars.purgeamount}"
+      ],
+      "formnames": [
+        "channelname",
+        "msgcount"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "purge response",
+      "guid": "c90ac44d-2313-48d1-b65d-ee0385b690d5",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "972db453-1e96-4d87-b2c6-8d4363a993ad"
+        }
+      ],
+      "x": 718,
+      "y": 1074,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Purge",
+        "",
+        "",
+        "",
+        "",
+        "Purged ${tempVars.purgeamount} messages.",
+        "${dbsVars.CommandAuthor.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "hentai?",
+      "guid": "99f16080-7176-4e82-a8a6-969cd48d6606",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "386f2562-1436-4c93-a3e9-15029c4cf2c7"
+        }
+      ],
+      "x": 310,
+      "y": 1400,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Hentai?",
+        "",
+        "",
+        "",
+        "",
+        "What the fuck man, whatever here you go",
+        "",
+        "https://external-preview.redd.it/3FcwR_J1373zi8NHfoSND3Mx2qSSvA0CZ80zEAEgAUI.jpg?auto=webp&s=8a1a8734fb043d6e9383c380fb0da75ee0ff65f5",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "pfp",
+      "guid": "aaee234b-338e-4b72-b9cf-90d55396c02d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "220cd074-c086-4f87-8a4f-5561512f0aea"
+          ]
+        }
+      ],
+      "x": 107,
+      "y": 1243
+    },
+    {
+      "type": "response",
+      "name": "get pfpuser",
+      "guid": "220cd074-c086-4f87-8a4f-5561512f0aea",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f53357e9-1ffa-42af-90fd-817bad30309d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "aaee234b-338e-4b72-b9cf-90d55396c02d"
+        }
+      ],
+      "x": 308,
+      "y": 1232,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "pfpuser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "pfp user",
+      "guid": "f53357e9-1ffa-42af-90fd-817bad30309d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "220cd074-c086-4f87-8a4f-5561512f0aea"
+        }
+      ],
+      "x": 515,
+      "y": 1240,
+      "rtype": "Message",
+      "rsubtype": "Send Image",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "${tempVars.pfpuser.user.avatarURL}",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "url",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "giverole",
+      "guid": "41fe1a87-370f-4744-95db-770f3d3d2cca",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "53de12b7-dd70-4c9e-a64b-279f73c0f226"
+          ]
+        }
+      ],
+      "x": 50,
+      "y": 1646,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "get role user",
+      "guid": "53de12b7-dd70-4c9e-a64b-279f73c0f226",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d7098b16-85ac-40b5-8551-12268ad292c6"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "41fe1a87-370f-4744-95db-770f3d3d2cca"
+        }
+      ],
+      "x": 269,
+      "y": 1645,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "giveroleto",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "what role to give",
+      "guid": "d7098b16-85ac-40b5-8551-12268ad292c6",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "whatrole",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "559c7585-add0-4e85-a3bd-334d8ca1571f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "53de12b7-dd70-4c9e-a64b-279f73c0f226"
+        }
+      ],
+      "x": 469,
+      "y": 1631,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "whatrole",
+        "Text",
+        "temp",
+        "2+"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "rolegive",
+      "guid": "559c7585-add0-4e85-a3bd-334d8ca1571f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "96f36cd2-5a42-44b1-97a3-6aaf8279763a"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d7098b16-85ac-40b5-8551-12268ad292c6"
+        }
+      ],
+      "x": 679,
+      "y": 1652,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.giveroleto.id}",
+        "${tempVars.whatrole}"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "rolegive response",
+      "guid": "96f36cd2-5a42-44b1-97a3-6aaf8279763a",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "559c7585-add0-4e85-a3bd-334d8ca1571f"
+        }
+      ],
+      "x": 885,
+      "y": 1609,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Give Role",
+        "",
+        "",
+        "",
+        "",
+        "Gave ${tempVars.whatrole} to <@${tempVars.giveroleto.id}>.",
+        "${dbsVars.CommandAuthor.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "removerole",
+      "guid": "ad03320c-b66b-4cba-88e3-a9c7ba0fac83",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "4f922af5-d8bb-4bf2-8d59-1c61822c3bd8"
+          ]
+        }
+      ],
+      "x": 40,
+      "y": 1838,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "get role user_1",
+      "guid": "4f922af5-d8bb-4bf2-8d59-1c61822c3bd8",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "12917d37-c1de-4f82-b865-df57daffe2a9"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ad03320c-b66b-4cba-88e3-a9c7ba0fac83"
+        }
+      ],
+      "x": 232,
+      "y": 1849,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "removerolefrom",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "what role to give_1",
+      "guid": "12917d37-c1de-4f82-b865-df57daffe2a9",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "removewhat",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "85a10914-7297-484c-a6c7-80e41f6e68c3"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "4f922af5-d8bb-4bf2-8d59-1c61822c3bd8"
+        }
+      ],
+      "x": 457,
+      "y": 1850,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "removewhat",
+        "Text",
+        "temp",
+        "2+"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "remove the role",
+      "guid": "85a10914-7297-484c-a6c7-80e41f6e68c3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "45f0e9e5-1053-498f-aa6a-049f736d7345"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "12917d37-c1de-4f82-b865-df57daffe2a9"
+        }
+      ],
+      "x": 656,
+      "y": 1876,
+      "rtype": "User Action",
+      "rsubtype": "Remove Role From User",
+      "formdata": [
+        "${tempVars.removerolefrom.id}",
+        "${tempVars.removewhat}",
+        "removed"
+      ],
+      "formnames": [
+        "user",
+        "roleName",
+        "reason"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "rolegive response_1",
+      "guid": "45f0e9e5-1053-498f-aa6a-049f736d7345",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "85a10914-7297-484c-a6c7-80e41f6e68c3"
+        }
+      ],
+      "x": 882,
+      "y": 1872,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "Remove Role",
+        "",
+        "",
+        "",
+        "",
+        "Removed the ${tempVars.removewhat} role from <@${tempVars.removerolefrom.id}>.",
+        "${dbsVars.CommandAuthor.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    }
+  ]
+}

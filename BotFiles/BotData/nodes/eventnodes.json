@@ -1,0 +1,295 @@
+{
+  "nodes": [
+    {
+      "type": "event",
+      "name": "User Joins Server",
+      "guid": "49ebbc23-2903-4f05-ab69-bc9ecb4f067e",
+      "variables": {
+        "user": "newuser"
+      },
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "89533c42-fe06-48e1-8425-ec9abcbac795"
+          ]
+        }
+      ],
+      "x": 99,
+      "y": 100,
+      "perms": []
+    },
+    {
+      "type": "event",
+      "name": "Any Message",
+      "guid": "49ebbc23-2903-4f05-ab69-bc9ecb4f8888",
+      "variables": {
+        "user": "msguser"
+      },
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": []
+        }
+      ],
+      "x": 101,
+      "y": 499,
+      "perms": []
+    },
+    {
+      "type": "event",
+      "name": "User Kicked",
+      "guid": "69ebbc23-2903-4f05-ab69-bc9ecb4f067e",
+      "variables": {
+        "user": "kickuser"
+      },
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "c222dfb9-df62-45cb-9fe4-ca2d350a39ea"
+          ]
+        }
+      ],
+      "x": 111,
+      "y": 259,
+      "perms": []
+    },
+    {
+      "type": "event",
+      "name": "User Banned",
+      "guid": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e",
+      "variables": {
+        "user": "banuser"
+      },
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "a912eba9-53a1-4aa6-a309-1da2b5f8a360"
+          ]
+        }
+      ],
+      "x": 100,
+      "y": 375,
+      "perms": []
+    },
+    {
+      "type": "event",
+      "name": "Bot Initialization",
+      "guid": "0101bc23-2003-4f05-ab69-bc9ecb4f067e",
+      "variables": {},
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": []
+        }
+      ],
+      "x": 100,
+      "y": 625,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "join message",
+      "guid": "17e8a561-40dc-4c17-97f7-e744bd3791fe",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "89533c42-fe06-48e1-8425-ec9abcbac795"
+        }
+      ],
+      "x": 566,
+      "y": 112,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "welcomes-leaves",
+        "FF0000",
+        "Welcome",
+        "",
+        "",
+        "",
+        "",
+        "Welcome to Teameru Anombe 2, <@${tempVars.newuser.id}>! ",
+        "${tempVars.newuser.user.avatarURL}",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "give mortal ducks",
+      "guid": "89533c42-fe06-48e1-8425-ec9abcbac795",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "17e8a561-40dc-4c17-97f7-e744bd3791fe"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "49ebbc23-2903-4f05-ab69-bc9ecb4f067e"
+        }
+      ],
+      "x": 303,
+      "y": 90,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.newuser.id}",
+        "Mortal Ducks"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "kick response",
+      "guid": "c222dfb9-df62-45cb-9fe4-ca2d350a39ea",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "69ebbc23-2903-4f05-ab69-bc9ecb4f067e"
+        }
+      ],
+      "x": 330,
+      "y": 247,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "welcomes-leaves",
+        "FF0000",
+        "Kick",
+        "",
+        "",
+        "",
+        "",
+        "Huh, <@${tempVars.kickuser.id}> was kicked, I wonder why?",
+        "${tempVars.kickuser.user.avatarURL}",
+        "",
+        "Their final message: ${tempVars.kickuser.lastMessage}",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ban response",
+      "guid": "a912eba9-53a1-4aa6-a309-1da2b5f8a360",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e"
+        }
+      ],
+      "x": 332,
+      "y": 375,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "welcomes-leaves",
+        "FF0000",
+        "Ban",
+        "",
+        "",
+        "",
+        "",
+        "Wow, <@${tempVars.banuser.id}> was banned, what the fuck did he do?",
+        "${tempVars.banuser.user.avatarURL}",
+        "",
+        "Their final message: ${tempVars.banuser.lastMessage}",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    }
+  ]
+}
